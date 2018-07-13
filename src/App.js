@@ -10,6 +10,7 @@ class App extends Component {
     score: 0,
     topScore: 0
   }
+
   render() {
     return (
       <div className="App">
@@ -17,7 +18,10 @@ class App extends Component {
 
         <div className="flex flex-wrap container" style={styles.gameContainer}>
           {this.state.rappers.map(i => (
-            <RapperCard id={i.id} key={i.id} src={i.image}/>
+            <RapperCard 
+              id={i.id} 
+              key={i.id} 
+              src={i.image} />
           ))}
         </div>
         
