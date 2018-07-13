@@ -5,7 +5,7 @@ class RapperCard extends React.Component {
         return (
             <section className="tc pa2">
                 <article className="hide-child relative ba b--black-20 center">
-                    <img src={this.props.src} width="200" height="150"/>
+                    <img src={this.props.src} width="200" height="150" alt="" />
                 </article>
             </section>
         )

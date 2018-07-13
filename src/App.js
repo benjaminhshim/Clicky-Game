@@ -6,12 +6,14 @@ import rappers from './rappers.json';
 
 class App extends Component {
   state = {
-    rappers
+    rappers,
+    score: 0,
+    topScore: 0
   }
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header score={this.state.score} topScore={this.state.topScore}/>
 
         <div className="flex flex-wrap container" style={styles.gameContainer}>
           {this.state.rappers.map(i => (
