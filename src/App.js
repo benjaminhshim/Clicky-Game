@@ -1,20 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import RapperCard from './components/RapperCard';
+import Header from './components/Header';
+import rappers from './rappers.json';
 
 class App extends Component {
+  state = {
+    rappers
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Header />
+
+        <div className="flex flex-wrap container" style={styles.gameContainer}>
+          {this.state.rappers.map(i => (
+            <RapperCard id={i.id} key={i.id} src={i.image}/>
+          ))}
+        </div>
+        
       </div>
     );
+  }
+}
+
+const styles = {
+  gameContainer: {
+    marginTop: 200
   }
 }
 
