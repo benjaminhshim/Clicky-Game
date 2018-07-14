@@ -4,6 +4,14 @@ import RapperCard from './components/RapperCard';
 import Header from './components/Header';
 import rappers from './rappers.json';
 
+
+// function shuffleArray(array) {
+//   for (let i = array.length - 1; i > 0; i--) {
+//       const j = Math.floor(Math.random() * (i + 1));
+//       [array[i], array[j]] = [array[j], array[i]];
+//   }
+// };
+
 class App extends Component {
   state = {
     rappers: rappers,
@@ -13,14 +21,15 @@ class App extends Component {
   }
 
   isClicked = id => {
-    // const rappers = this.state.rappers.filter(i => i.clicked !== clicked);
-    this.state.rappers.forEach(i => {
-      if (id === i.id) {
-        this.state.clicked.push(i);
-        this.incrementScore();
-      }
+    this.setState({
+      clicked: [...this.state.clicked, id]
     })
-  }
+    this.incrementScore();
+
+    if (this.state.clicked.indexOf(id) >= 0) {
+      this.resetGame();
+    }
+}
 
   incrementScore = () => {
     const newScore = this.state.score + 1
@@ -28,6 +37,25 @@ class App extends Component {
       score: newScore
     })
   }
+
+  handleTotalScore = () => {
+    const newHighScore = this.state.score;
+    if (this.state.score > this.state.topScore) {
+      this.setState({
+        topScore: newHighScore
+      })
+    }
+  }
+
+  resetGame = () => {
+    alert('game over');
+    this.handleTotalScore();
+    this.setState({
+      score: 0,
+      clicked: []
+    });
+  }
+
 
   render() {
     return (
