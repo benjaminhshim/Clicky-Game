@@ -3,14 +3,9 @@ import './App.css';
 import RapperCard from './components/RapperCard';
 import Header from './components/Header';
 import rappers from './rappers.json';
+import shuffleArray from './Shuffle.js';
 
 
-// function shuffleArray(array) {
-//   for (let i = array.length - 1; i > 0; i--) {
-//       const j = Math.floor(Math.random() * (i + 1));
-//       [array[i], array[j]] = [array[j], array[i]];
-//   }
-// };
 
 class App extends Component {
   state = {
@@ -50,10 +45,15 @@ class App extends Component {
   resetGame = () => {
     alert('game over');
     this.handleTotalScore();
+    this.shuffleRappers();
     this.setState({
       score: 0,
       clicked: []
     });
+  }
+
+  shuffleRappers = () => {
+    shuffleArray(this.state.rappers);
   }
 
 
