@@ -15,5 +15,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "radium": "^0.24.1",
+    "react-animations": "^1.0.0",
+    "react-shuffle": "^2.1.0"
   }
 }

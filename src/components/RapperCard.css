@@ -1,0 +1,12 @@
+.rapper-card {
+    box-shadow: 0 4px 8px -1px gray;
+    margin: 19px;
+    display: inline-block;
+}
+
+.container {
+    max-width: 90%;
+    margin-top: 50px;
+}
+
+
