@@ -10,6 +10,7 @@ import shuffleArray from './Shuffle.js';
 import Radium, {StyleRoot} from 'radium';
 import { flipInX } from 'react-animations';
 
+
 class App extends Component {
   state = {
     rappers: rappers,
@@ -98,8 +99,6 @@ class App extends Component {
             </StyleRoot>
           ))}
         </div>
-
-        
       </div>
     );
   }

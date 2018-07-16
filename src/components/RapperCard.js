@@ -1,6 +1,7 @@
 import React from 'react';
 import './RapperCard.css';
 
+
 import Radium, {StyleRoot} from 'radium';
 import { flipInX } from 'react-animations';
 
@@ -31,3 +32,4 @@ const styles = {
   
 
 export default RapperCard;
+
