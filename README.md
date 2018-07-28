@@ -11,7 +11,7 @@ clicky-game is a XXL 2018 Freshman Class-themed memory game built with React.
 
 
 # Demos
-![](../../projects/my-portfolio-react/src/assets/img/xxl.png)
+![](./public/xxl.png)
 
 
 
