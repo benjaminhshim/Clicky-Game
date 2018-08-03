@@ -1,12 +1,99 @@
-.rapper-card {
-    box-shadow: 0 4px 8px -1px gray;
-    margin: 19px;
-    display: inline-block;
-}
-
 .container {
     max-width: 90%;
     margin-top: 50px;
+    padding: 0px 250px;
+    justify-content: space-around;
+}
+
+.rapper-card {
+    box-shadow: 0 4px 8px -1px gray;
+    margin: 20px 20px;
+    display: inline-block;
 }
 
 
+
+@media only screen and (max-width: 1442px) {
+    .container {
+        padding: 0px 150px;
+    }
+
+}
+
+@media only screen and (max-width: 1219px) {
+    .container {
+        padding: 0px 100px;
+    }
+    .rapper-card {
+        margin: 20px 0px;
+    }
+}
+
+@media only screen and (max-width: 976px) {
+    .container {
+        padding: 0px 20px;
+    }
+    .rapper-card {
+        margin: 20px 10px;
+    }
+}
+
+@media only screen and (max-width: 864px) {
+    .container {
+        padding: 0px 0px;
+    }
+    .rapper-card {
+        margin: 20px 0px;
+    }
+}
+
+
+@media only screen and (max-width: 864px) {
+    
+    .container {
+        padding: 0px 0px;
+    }
+    .rapper-card {
+        margin: 20px 20px;
+        width: 150px;
+        height: 100px
+    }
+}
+
+@media only screen and (max-width: 634px) {
+    
+    .container {
+        padding: 0px 0px;
+    }
+    .rapper-card {
+        margin: 20px 0px;
+
+        width: 150px;
+        height: 100px
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    
+    .container {
+        padding: 0px 0px;
+    }
+    .rapper-card {
+        margin: 20px 20px;
+        width: 100px;
+        height: 75px;
+    }
+}
+
+@media only screen and (max-width: 467px) {
+    
+    .container {
+        padding: 0px 0px;
+    }
+    .rapper-card {
+        margin: 20px 10px;
+        width: 100px;
+        height: 75px;
+    }
+}

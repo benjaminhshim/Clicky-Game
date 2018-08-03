@@ -10,10 +10,10 @@ const RapperCard = props => (
         <article className="hide-child relative b--black-20 center">
             <StyleRoot>
                 <img 
-                    className="rapper-card"
+                    className="rapper-card responsive"
                     src={props.src} 
-                    width="250" 
-                    height="175" 
+                    width="225" 
+                    height="150" 
                     alt="" 
                     onClick={() => {props.isClicked(props.id)}}
                     style={styles.flipInX}
